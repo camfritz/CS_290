@@ -1,0 +1,21 @@
+#tabs {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: auto;
+	padding-right: auto;
+}
+
+#titleBlock {
+	/*background: url(https://images.freecreatives.com/wp-content/uploads/2016/04/Simple-Blue-Plain-Texture-Wallpaper.jpg)*/
+	background-color: cornflowerblue;
+	font-size: 6rem;
+}
+
+.center-content {
+	padding-right: auto;
+	padding-left: auto;
+}
+
+.text-smallcaps {
+	font-variant: small-caps;
+}
