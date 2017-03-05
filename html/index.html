@@ -14,61 +14,137 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<div class="row col-md-8 col-md-offset-2" id="titleBlock">
+		<div class="col-md-8 col-md-offset-2" id="titleBlock">
 			<p class="text-center text-smallcaps">Currency Exchange</p>
 		</div>
 	</div>
-	<div class="container-fluid" id="tabs" style="background-color: lavender">
-		<div class="btn-group center-block" role="group" style="background-color: royalblue">
-			<button type="button" class="btn btn-lg btn-default text-smallcaps" id="exchangeFundsBtn">Exchange Funds</button>
-			<button type="button" class="btn btn-lg btn-default text-smallcaps" id="addCountryBtn">Add Country</button>
-			<button type="button" class="btn btn-lg btn-default text-smallcaps" id="updateCountryBtn">Update Country</button>
+	<div class="container-fluid">
+		<div class="wrapper" id="tabs">
+			<div class="btn-group btn-group-justified" role="group">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="exchangeFundsBtn">Exchange Funds</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="addCountryBtn">Add Country</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="updateCountryBtn">Update Country</button>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="container-fluid" id="exchangeFunds">
-		<div class="container">
-			<div class="col-md-3 col-md-offset-2 inline-block text-center" style="background-color: lightseagreen">
-				<button class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
-					<span class="text-smallcaps">Currency From</span>
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href=""></a>Input Country 1</li>
-					<li><a href=""></a>Input Country 2</li>
-					<li><a href=""></a>Input Country 3</li>
-					<li><a href=""></a>Input Country 4</li>
-				</ul>
+		<div class="wrapper">
+			<div class="row">
+				<div class="container inline-block" id="countryFrom">
+					<div class="btn-group">
+						<button type="button" class="btn btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Current Country <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="container inline-block" style="width: 10%">
+					<p class="text-center text-smallcaps">To</p>
+				</div>
+				<div class="container inline-block" id="countryTo">
+					
+					<div class="btn-group">
+						<button type="button" class="btn btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Destination Country <span class="caret"></span>
+						</button>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+						</ul>
+					</div>
+
+				</div>
 			</div>
-			<div class="col-md-2 inline-block text-center text-capitalize"><h3>to</h3></div>
-			<div class="col-md-3 inline-block text-center" style="background-color: pink">
-				<button class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
-					Destination Country
-					<span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href=""></a>Output Country 1</li>
-					<li><a href=""></a>Output Country 2</li>
-					<li><a href=""></a>Output Country 3</li>
-					<li><a href=""></a>Output Country 4</li>
-				</ul>
+			<div class="container inline-block">
+				<form action="" class="form-inline">
+					<div class="form-group">
+						<label for="conversionAmount"><span style="font-size: 2rem">Amount</span></label>
+						<input type="text" class="form-control input-lg" id="conversionAmount" placeholder="0.00">
+						<button type="submit" class="btn btn-lg btn-success">Submit</button>
+					</div>
+				</form>
 			</div>
-		</div>
-		<div class="container">
-			<div class="container col-md-5 col-md-offset-1 inline-block" style="background-color: lightgreen">
-				things
+			<div class="container inline-block">
+				<h3>Server Response</h3>
 			</div>
-			<div class="container col-md-5 inline-block" style="background-color: wheat">
-				things
-			</div>
+			
 		</div>
 	</div>
-	<div class="container-fluid" id=" ">
-		
+	<div class="container-fluid" id="addCountry">
+		<h1 class="text-smallcaps text-center">addCountry Section</h1>
+		<form>
+			<div class="form-group">
+				<label for="countryName">Country Name:</label>
+				<input type="text" class="form-control" id="countryName" placeholder="Country Name" required>
+			</div>
+			<div class="form-group">
+				<label for="notation">Currency Notation:</label>
+				<input type="text" class="form-control" id="notation" placeholder="Currency Notation" required>
+			</div>
+			<div class="form-group">
+				<label for="currencyName">Currency Name:</label>
+				<input type="text" class="form-control" id="currencyName" placeholder="Currency Name" required>
+			</div>
+			<div class="form-group">
+				<label for="commissionRate">Commission Rate:</label>
+				<input type="text" class="form-control" id="commissionRate" placeholder="Commission Rate" required>
+			</div>
+			<div class="form-group">
+				<label for="multipliterRate">Multiplier:</label>
+				<input type="text" class="form-control" id="multipliterRate" placeholder="Multiplier" required>
+			</div>
+			<button type="reset" class="btn btn-lg btn-success">Clear Fields</button>
+			<button type="submit" class="btn btn-lg btn-success">Add Country</button>
+		</form>
+
 	</div>
 	<div class="container-fluid" id="updateCountry">
-		
+		<h1 class="text-smallcaps">updateCountry Section</h1>
+
+		<form>
+			<div class="btn-group">
+				<button type="button" class="btn btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Select Country <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Something else here</a></li>
+				</ul>
+			</div>
+			<div class="form-group">
+				<label for="notation">Currency Notation:</label>
+				<input type="text" class="form-control" id="notation" placeholder="Currency Notation" required>
+			</div>
+			<div class="form-group">
+				<label for="currencyName">Currency Name:</label>
+				<input type="text" class="form-control" id="currencyName" placeholder="Currency Name" required>
+			</div>
+			<div class="form-group">
+				<label for="commissionRate">Commission Rate:</label>
+				<input type="text" class="form-control" id="commissionRate" placeholder="Commission Rate" required>
+			</div>
+			<div class="form-group">
+				<label for="multipliterRate">Multiplier:</label>
+				<input type="text" class="form-control" id="multipliterRate" placeholder="Multiplier" required>
+			</div>
+			<button type="reset" class="btn btn-lg btn-success">Clear Fields</button>
+			<button type="submit" class="btn btn-lg btn-success">Add Country</button>
+		</form>
+
 	</div>
-	<div class="footer">
+	<div class="footer navbar-inverse navbar-fixed-bottom">
 		<p class="text-center">Assignment by L. Gothberg and K. MacAthur</p>
 	</div>
 
@@ -77,5 +153,6 @@
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<!-- Latest compiled and minified Bootstrap JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="../js/scripts.js"></script>
 </body>
 </html>
