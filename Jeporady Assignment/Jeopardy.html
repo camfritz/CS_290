@@ -1,0 +1,652 @@
+<html>
+<head>
+	<script src="gen_validatorv4.js" type="text/javascript"></script>
+
+	<style>
+		html, body {
+			background: #80bfff;
+			height: 100%;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		h1 {
+			font-size: 300%;
+		}
+
+		p {
+			font-size: 150%;
+		}
+
+		form {
+			padding: 0px;
+		}
+
+		footer {
+			text-align: center;
+			height: 3em;
+			position: relative;
+			bottom: 0;
+			padding-top: 5em;
+		}
+
+		.cell_clean {
+			
+		}
+
+		.button {
+			text-align: center;
+			display: inline-block;
+			font-size: 14px;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+		.button {
+			border-radius: 4px;
+		}
+
+		element.style {
+			display: table;
+		}
+
+		#game {
+			width: 100%;
+			background-color: black;
+			padding: 0;
+			margin: auto;
+			font-size: 25px;
+		}
+
+		#game tbody td {
+			cursor: pointer;
+			height: 100px;
+			border: 3px solid #2a3698;
+		}
+
+		#game tbody td, #game thead th {
+			vertical-align: middle;
+			background-color:#2a3698;
+			padding:5px;
+			text-align:center;
+			width:19%;
+			color: orange;
+			height:60px;
+			font-size:20px;
+		}
+
+		.hide {
+			display: none;
+		}
+
+		thead {
+			display: table-header-group;
+			vertical-align: middle;
+		}
+
+		tr {
+			display: table-row;
+		}
+
+		tbody {
+			display: table-row-group;
+			vertical-align: middle;
+		}
+
+		div {
+			display: block;
+		}
+
+		h3 {
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		#score {
+			position: relative;
+			width: 100%;
+			text-align: center;
+			height: 110px;
+			left: 0;
+			background-color: #80bfff;
+		}
+
+		#score input.teamName {
+			font-size: 20px;
+			font-weight: bold;
+			text-align: center;
+			width: 100%;
+			display: block;
+			background: #80bfff;
+		}
+
+		input.add {
+			color: green;
+			font-weight: bold;
+			font-size: 20px;
+			cursor: pointer;
+			display: inline;
+		}
+
+		input.subtract {
+			color: red;
+			font-weight: bold;
+			font-size: 20px;
+			cursor: pointer;
+			display: inline;
+		}
+
+	</style>
+
+	<title>
+		Jeopardy!
+	</title>
+</head>
+
+<body>
+	<div class = "" id = "HomePage">
+		<h1>Welcome to Jeopardy</h1>
+		<form name = "form1" id = "form1">
+			<p>Select up to Five Categories</p>
+			<input class = "checkbox" type = "checkbox" name = "ckb" id = "StudentLife" value = "StudentLife" <label for = "StudentLife"> Student Life </label><br>
+			<input class = "checkbox" type = "checkbox" name = "ckb" id = "CSLife" value = "CSLife" >
+			<label for = "CSLife"> CS Major Life </label><br>
+			<input class = "checkbox" type = "checkbox" name = "ckb" id = "OtherMajors" value = "OtherMajors" >
+			<label for = "OtherMajors"> Other Majors </label><br>
+			<input class = "checkbox" type = "checkbox" name = "ckb" id = "Trends" value = "Trends" >
+			<label for = "Trends"> 2016/2017 Trends </label><br>
+			<input calss = "checkbox" type = "checkbox" name = "ckb" id = "Professors" value = "Professors" >
+			<label for = "Professors"> Marc/Yong </label><br>
+			<input class = "checkbox" type = "checkbox" name = "ckb" id = "gPlants" value = "gPlants">
+			<label for = "Other"> Garden Plants </label><br>
+		</form>
+
+		<form name = "myForm" id = "myForm" action = "">
+			<p>Enter up to 4 Team Names</p>
+			Team 1: <input type = "text" id = "Team1" name = "Team1" placeholder = "Required" required><br>
+			Team 2: <input type = "text" name = "Team2" placeholder = "Required" required><br>
+			Team 3: <input type = "text" name = "Team3" placeholder = "Optional"><br>
+			Team 4: <input type = "text" name = "Team4" placeholder = "Optional"><br><br>
+			<button type = "button" class = "button" id = "NextButton" value = "Submit" onclick="validateform()">Next</button>
+		</form>
+	</div>
+
+	<div class = "" id = "BoardGame">
+		<table id = "game" cellspacing = "5" cellpading = "0" class = "hide" style = "display: table;">
+			<thead>
+				<tr>
+					<th id = "cat1">Student Life</th>
+					<th id = "cat2">CS Life</th>
+					<th id = "cat3">Other Majors</th>
+					<th id = "cat4">2016/'17 Trends</th>
+					<th id = "cat5">Marc/Yong</th>
+					<th id = "cat6">Garden Plants</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td id = "t00" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q00">Some question</div>
+							<div id = "a00">ANSWER ME!!!</div>
+						</div>
+					</td>
+					<td id = "t01" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q01">Some question</div>
+							<div id = "a01">ANSWER ME!!!</div>
+						</div>
+					</td>
+					<td id = "t02" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q02">Some question</div>
+							<div id = "a02">ANSWER ME!!!</div>
+						</div>
+					</td>
+					<td id = "t03" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q03">Some question</div>
+							<div id = "a03">ANSWER ME!!!</div>
+						</div>
+					</td>
+					<td id = "t04" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q04">Some question</div>
+							<div id = "a04">ANSWER ME!!!</div>
+						</div>
+					</td>
+					<td id = "t05" class = "cell_clean">
+						<h3>100</h3>
+						<div class = "hide">
+							<div id = "q05">Some question</div>
+							<div id = "a05">ANSWER ME!!!</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td id = "t10" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q10">The average amount of time spent on Marc's assignment</div>
+							<div id = "a10">What is 20 hours?</div>
+						</div>
+					</td>
+					<td id = "t11" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q11">The average amount of time spent on Marc's assignment</div>
+							<div id = "a11">What is 20 hours?</div>
+						</div>
+					</td>
+					<td id = "t12" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q12">The average amount of time spent on Marc's assignment</div>
+							<div id = "a12">What is 20 hours?</div>
+						</div>
+					</td>
+					<td id = "t13" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q13">The average amount of time spent on Marc's assignment</div>
+							<div id = "a13">What is 20 hours?</div>
+						</div>
+					</td>
+					<td id = "t14" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q14">The average amount of time spent on Marc's assignment</div>
+							<div id = "a14">What is 20 hours?</div>
+						</div>
+					</td>
+					<td id = "t15" class = "cell_clean">
+						<h3>200</h3>
+						<div class = "hide">
+							<div id = "q15">The average amount of time spent on Marc's assignment</div>
+							<div id = "a15">What is 20 hours?</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td id = "t20" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q20">Some question that will be asked</div>
+							<div id = "a20">Some answer</div>
+						</div>
+					</td>
+					<td id = "t21" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q21">Some question that will be asked</div>
+							<div id = "a21">Some answer</div>
+						</div>
+					</td>
+					<td id = "t22" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q22">Some question that will be asked</div>
+							<div id = "a22">Some answer</div>
+						</div>
+					</td>
+					<td id = "t23" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q23">Some question that will be asked</div>
+							<div id = "a23">Some answer</div>
+						</div>
+					</td>
+					<td id = "t24" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q24">Some question that will be asked</div>
+							<div id = "a24">Some answer</div>
+						</div>
+					</td>
+					<td id = "t25" class = "cell_clean">
+						<h3>300</h3>
+						<div class = "hide">
+							<div id = "q25">Some question that will be asked</div>
+							<div id = "a25">Some answer</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td id = "t30" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q30">Some question that will be asked</div>
+							<div id = "a30">Some answer</div>
+						</div>
+					</td>
+					<td id = "t31" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q31">Some question that will be asked</div>
+							<div id = "a31">Some answer</div>
+						</div>
+					</td>
+					<td id = "t32" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q32">Some question that will be asked</div>
+							<div id = "a32">Some answer</div>
+						</div>
+					</td>
+					<td id = "t33" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q33">Some question that will be asked</div>
+							<div id = "a33">Some answer</div>
+						</div>
+					</td>
+					<td id = "t34" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q34">Some question that will be asked</div>
+							<div id = "a34">Some answer</div>
+						</div>
+					</td>
+					<td id = "t35" class = "cell_clean">
+						<h3>400</h3>
+						<div class = "hide">
+							<div id = "q35">Some question that will be asked</div>
+							<div id = "a35">Some answer</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td id = "t40" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q40">Some question that will be asked</div>
+							<div id = "a40">Some answer</div>
+						</div>
+					</td>
+					<td id = "t41" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q41">Some question that will be asked</div>
+							<div id = "a41">Some answer</div>
+						</div>
+					</td>
+					<td id = "t42" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q42">Some question that will be asked</div>
+							<div id = "a42">Some answer</div>
+						</div>
+					</td>
+					<td id = "t43" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q43">Some question that will be asked</div>
+							<div id = "a43">Some answer</div>
+						</div>
+					</td>
+					<td id = "t44" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q44">Some question that will be asked</div>
+							<div id = "a44">Some answer</div>
+						</div>
+					</td>
+					<td id = "t45" class = "cell_clean">
+						<h3>500</h3>
+						<div class = "hide">
+							<div id = "q45">Some question that will be asked</div>
+							<div id = "a45">Some answer</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<div id = "score" style = "display: block">
+			<table cellspacing = "10">
+				<tbody>
+					<tr>
+						<th>
+							<input class = "teamName" type = "text" value = "Team1">
+						</th>
+						<th>
+							<input class = "teamName" type = "text" value = "Team2">
+						</th>
+					</tr>
+					<tr>
+						<td>
+							<h3 id = "team1">0</h3>
+							<input class = "add" onclick = "game.addPoints(1)" value="+" type = "button">
+							<input class = "subtract" onclick  = "game.subtractPoints(1)" value = "-" type = "button">
+						</td>
+						<td>
+							<h3 id = "team2">0</h3>
+							<input class = "add" onclick = "game.addPoints(2)" value = "+" type = "button">
+							<input class = "subtract" onclick = "game.subtractPoints(2)" value = "-" type = "button">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript"></script>
+	<script src="../js/scripts.js"></script>
+
+</body>
+
+<script>
+	$(document).ready(function() {
+		$(HomePage).show();
+		$(BoardGame).hide();
+		$(cat1).hide();
+		$(cat2).hide();
+		$(cat3).hide();
+		$(cat4).hide();
+		$(cat5).hide();
+		$(cat6).hide();
+		$('.cell_clean').hide();
+		/*
+		$("input[name='ckb']").change(function() {
+			var maxAllowed = 5;
+			var cnt = $("input[name='ckb']:checked").length;
+			if(cnt < 5 || cnt > 5) {
+				$(this).prop("checked", "");
+				alert('You must select ' + maxAllowed + ' categories');
+				//alert('You must select 5 categories.');
+			}
+		});
+		*/
+	});
+
+
+	// $(NextButton).click(function() {
+	// 	//validateBox();
+	// 	validateform();
+	// });
+
+	function validateform() {
+		var field1 = document.forms["myForm"]["Team1"].value;
+		var field2 = document.forms["myForm"]["Team2"].value;
+		// var categoriesSelected = $("#form1").find("input:checkbox:checked").length;
+		if ($("#form1").find("input:checkbox:checked").length != 5) {
+			alert("You must select exactly 5 categories.");
+		} else if (field1 == "" || field2 == "") {
+			alert("At least two teams are required");
+		} else {
+			getQuestions();
+		}
+	}
+
+	/*
+	function checked() {
+		var check = 0;
+		$("input:checkbox").each(function() {
+			if($(this).is(':check')) {
+				check++;
+			}
+		});
+		if(check < 5) {
+			alert("Chose more selections");
+		}
+				
+	}
+	*/
+	/*
+	function validateBox() {
+		var tags = document.getElementByName('ckb');
+		var total = 0;
+
+		for(var i = 0; i < tags.length; i++) {
+			if(tags[i].checked) {
+				++total;
+			}
+			if(total < 5) {
+				alert("Select 5 categories.");
+				tags[i].checked = false;
+				return false;
+			} else {
+				return true;
+			}
+		}
+	}
+	*/
+	
+	function getQuestions() {
+		//$("[id^=t0]").show();
+		var c1 = ["t00", "t10", "t20", "t30", "t40"];
+		var c2 = ["t01", "t11", "t21", "t31", "t41"];
+		var c3 = ["t02", "t12", "t22", "t32", "t42"];
+		var c4 = ["t03", "t13", "t23", "t33", "t43"];
+		var c5 = ["t04", "t14", "t24", "t34", "t44"];
+		var c6 = ["t05", "t15", "t25", "t35", "t45"];
+
+		var q1 = ["q00", "q10", "q20", "q30", "q40"];
+		var q2 = ["q01", "q11", "q21", "q31", "q41"];
+		var q3 = ["q02", "q12", "q22", "q32", "q42"];
+		var q4 = ["q03", "q13", "q23", "q33", "q43"];
+		var q5 = ["q04", "q14", "q24", "q34", "q44"];
+		var q6 = ["q05", "q15", "q25", "q35", "q45"];
+
+		var a1 = ["a00", "a10", "a20", "a30", "a40"];
+		var a2 = ["a01", "a11", "a21", "a31", "a41"];
+		var a3 = ["a02", "a12", "a22", "a32", "a42"];
+		var a4 = ["a03", "a13", "a23", "a33", "a43"];
+		var a5 = ["a04", "a14", "a24", "a34", "a44"];
+		var a6 = ["a05", "a15", "a25", "a35", "a45"];
+
+		var p1 = ["p00", "p10", "p20", "p30", "p40"];
+		var p2 = ["p01", "p11", "p21", "p31", "p41"];
+		var p3 = ["p02", "p12", "p22", "p32", "p42"];
+		var p4 = ["p03", "p13", "p23", "p33", "p43"];
+		var p5 = ["p04", "p14", "p24", "p34", "p44"];
+		var p6 = ["p05", "p15", "p25", "p35", "p45"];
+
+		if(document.getElementById("StudentLife").checked == true) {
+			$(cat1).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c1[i]).show();
+			}
+
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category1/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q1[i]).html(data.category1[i].q_text);
+					$('#' + a1[i]).html(data.category1[i].a_text);
+					//$('#' + p1[i]).html(data.category1[i].value);
+				}
+			}})
+		}
+
+		if(document.getElementById("CSLife").checked == true) {
+			$(cat2).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c2[i]).show();
+			}
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category2/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q2[i]).html(data.category2[i].q_text);
+					$('#' + a2[i]).html(data.category2[i].a_text);
+					//$('#' + p2[i]).html(data.category2[i].value);
+				}
+				
+			}})
+		}
+
+		if(document.getElementById("OtherMajors").checked == true) {
+			$(cat3).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c3[i]).show();
+			}
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category3/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q3[i]).html(data.category3[i].q_text);
+					$('#' + a3[i]).html(data.category3[i].a_text);
+					//$('#' + p3[i]).html(data.category3[i].value);
+				}
+
+			}})
+		}
+
+		if(document.getElementById("Trends").checked == true) {
+			$(cat4).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c4[i]).show();
+			}
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category4/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q4[i]).html(data.category4[i].q_text);
+					$('#' + a4[i]).html(data.category4[i].a_text);
+					//$('#' + p4[i]).html(data.category4[i].value);
+				}
+
+			}})
+		}
+
+		if(document.getElementById("Professors").checked == true) {
+			$(cat5).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c5[i]).show();
+			}
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category5/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q5[i]).html(data.category5[i].q_text);
+					$('#' + a5[i]).html(data.category5[i].a_text);
+					//$('#' + p5[i]).html(data.category5[i].value);
+				}
+
+			}})
+		}
+
+		if(document.getElementById("gPlants").checked == true) {
+			$(cat6).show();
+			for(var i = 0; i < 5; i++) {
+				$('#' + c6[i]).show();
+			}
+			$.ajax({url: "https://jeopardy-game-camfritz.c9users.io/category6/", success: function(data) {
+				for(var i = 0; i < 5; i++) {
+					$('#' + q6[i]).html(data.category6[i].q_text);
+					$('#' + a6[i]).html(data.category6[i].a_text);
+					//$('#' + p6[i]).html(data.category6[i].value);
+				}
+
+			}})
+		}
+
+		$(HomePage).hide();
+		$(BoardGame).show();
+	}
+
+
+</script>
+
+<footer>
+	Created by Krishan Chopra and Camron Fritz
+</footer>
+
+</html>

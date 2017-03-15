@@ -1,0 +1,172 @@
+/* ********************  HTML TAGS  ******************** */
+body {
+	background: lightskyblue;
+	padding: 20px;
+	margin: 20px;
+	font-family: "Arial", sans-serif;
+}
+
+footer {
+	text-align: center;
+	vertical-align: center;
+	height: 3em;
+	position: absolute;
+	bottom: 0;
+	padding: 10px;
+	background-color: black;
+	text-decoration-color: white;
+	box-shadow: inset 10px 0 0 0 transparent;
+}
+
+h1 {
+	font-size: 4rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 3rem;
+	text-align: center;
+}
+
+h3 {
+	font-size: 2rem;
+	text-align: center;
+}
+
+table {
+	background-color: black;
+	width: 80%;
+}
+
+td {
+	background-color: blue;
+	border-radius: 10px;
+	text-align: center center;
+	vertical-align: center;
+	text-decoration-color: gold;
+	padding: 10px;
+}
+
+th {
+	background-color: blue;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: center;
+	text-decoration-color: white;
+	padding: 10px;
+}
+
+/* ********************  CLASSES  ******************** */
+
+.half-width {
+	width: 40%;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.button {
+	text-align: center;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.wrapper {
+	width: 90%;
+	justify-content: middle;
+}
+
+element.style {
+	display: table;
+}
+
+#game {
+	width: 100%;
+	background-color: black;
+	padding: 0;
+	margin: auto;
+	font-size: 25px;
+}
+
+#game tbody td {
+	cursor: pointer;
+	height: 100px;
+	border: 3px solid #2a3698;
+}
+
+#game tbody td, #game thead th {
+	vertical-align: middle;
+	background-color:#2a3698;
+	padding:5px;
+	text-align:center;
+	width:19%;
+	color: orange;
+	height:60px;
+	font-size:20px;
+}
+
+.hide {
+	display: none;
+}
+
+thead {
+	display: table-header-group;
+	vertical-align: middle;
+}
+
+tr {
+	display: table-row;
+}
+
+tbody {
+	display: table-row-group;
+	vertical-align: middle;
+}
+
+div {
+	display: block;
+}
+
+h3 {
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#score {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	height: 110px;
+	left: 0;
+	background-color: #80bfff;
+}
+
+#score input.teamName {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	display: block;
+	background: #80bfff;
+}
+
+input.add {
+	color: green;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+	display: inline;
+}
+
+input.subtract {
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+	display: inline;
+}

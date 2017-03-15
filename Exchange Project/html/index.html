@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Currency Exchange-</title>
+
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Personal CSS -->
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="col-md-8 col-md-offset-2" id="titleBlock">
+			<p class="text-center text-smallcaps">Currency Exchange</p>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="container" id="tabs">
+			<div class="btn-group btn-group-justified" role="group">
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="exchangeFundsBtn">Exchange Funds</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="addCountryBtn">Add Country</button>
+				</div>
+				<div class="btn-group" role="group">
+					<button type="button" class="btn btn-lg text-smallcaps" id="updateCountryBtn">Update Country</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ********************  EXCHANGE FUNDS SECTION  ******************** -->
+
+	<div class="container-fluid" id="exchangeFunds">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-md-offset-2 inline-block selectionMenu" id="countryFrom">
+					<select name="Current Country" id="originCountryList">
+						<option value="" hidden selected>Origin Country</option>
+					</select>
+				</div>
+				<div class="col-md-2 inline-block" style="font-size: 3rem">
+					<p class="text-center text-smallcaps">To</p>
+				</div>
+				<div class="col-md-3 inline-block selectionMenu" id="countryTo">
+					<select name="Current Country" id="destinationCountryList">
+						<option value="" hidden selected>Origin Country</option>
+					</select>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-5 inline-block">
+					<form class="form-inline">
+						<div class="form-group">
+							<label for="conversionAmount">Amount</label>
+							<input type="text" class="form-control input-lg" id="conversionAmount" placeholder="0.00">
+						</div>
+						<button type="submit" class="btn btn-lg btn-success">Submit</button>
+					</form>
+				</div>
+				<div class="col-md-7 inline-block">
+					<h3>Server Response</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ********************  ADD COUNTRY SECTION  ******************** -->
+
+	<div class="container-fluid" id="addCountry">
+		<div class="containter col-md-6 col-md-offset-3">
+			<h1 class="text-smallcaps text-center">addCountry Section</h1>
+			<form>
+				<div class="form-group">
+					<label for="countryName">Country Name:</label>
+					<input type="text" class="form-control" id="countryName" placeholder="Country Name" required>
+				</div>
+				<div class="form-group">
+					<label for="notation">Currency Notation:</label>
+					<input type="text" class="form-control" id="notation" placeholder="Currency Notation" required>
+				</div>
+				<div class="form-group">
+					<label for="currencyName">Currency Name:</label>
+					<input type="text" class="form-control" id="currencyName" placeholder="Currency Name" required>
+				</div>
+				<div class="form-group">
+					<label for="commissionRate">Commission Rate:</label>
+					<input type="text" class="form-control" id="commissionRate" placeholder="Commission Rate" required>
+				</div>
+				<div class="form-group">
+					<label for="multipliterRate">Multiplier:</label>
+					<input type="text" class="form-control" id="multipliterRate" placeholder="Multiplier" required>
+				</div>
+				<button type="reset" class="btn btn-lg btn-success">Clear Fields</button>
+				<button type="submit" class="btn btn-lg btn-success">Add Country</button>
+			</form>
+		</div>
+	</div>
+
+	<!-- ********************  UPDATE COUNTRY SECTION  ******************** -->
+
+	<div class="container-fluid" id="updateCountry">
+		<h1 class="text-smallcaps text-center">updateCountry Section</h1>
+		<div class="containter col-md-6 col-md-offset-3">
+			<div class="selectionMenu" id="countryFrom">
+				<select name="Current Country" id="originCountryList">
+					<option value="" hidden selected>Origin Country</option>
+				</select>
+			</div>
+			<form>
+				<div class="form-group">
+					<label for="notation">Currency Notation:</label>
+					<input type="text" class="form-control" id="notation" placeholder="Currency Notation" required>
+				</div>
+				<div class="form-group">
+					<label for="currencyName">Currency Name:</label>
+					<input type="text" class="form-control" id="currencyName" placeholder="Currency Name" required>
+				</div>
+				<div class="form-group">
+					<label for="commissionRate">Commission Rate:</label>
+					<input type="text" class="form-control" id="commissionRate" placeholder="Commission Rate" required>
+				</div>
+				<div class="form-group">
+					<label for="multipliterRate">Multiplier:</label>
+					<input type="text" class="form-control" id="multipliterRate" placeholder="Multiplier" required>
+				</div>
+				<button type="reset" class="btn btn-lg btn-success">Clear Fields</button>
+				<button type="submit" class="btn btn-lg btn-success">Add Country</button>
+			</form>
+		</div>
+	</div>
+	<div class="footer navbar-inverse navbar-fixed-bottom">
+		<p class="text-center">Assignment by L. Gothberg and K. MacAthur</p>
+	</div>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<!-- Latest compiled and minified Bootstrap JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- Personal JS -->
+	<script src="../js/scripts.js"></script>
+</body>
+</html>
