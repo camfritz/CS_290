@@ -1,257 +1,83 @@
 <!doctype HTML>
 <html>
-<!-- ********************  HEAD SECTION  ******************** -->
 <head>
-	<link rel="stylesheet" href="./styles.css">
+	<title>Gothberg &amp; MacAuther Jeporady</title>
+
+	<!-- jQuery 3.1.1 Minified -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- Custom JS -->
 	<script src="./scripts.js"></script>
-	<title>Jeporady</title>
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./styles.css">
 </head>
-<!-- ********************  BODY SECTION  ******************** -->
+
 <body>
-	<div id="selectCatagories">
-		<h1>Welcome to Jeopardy</h1>
-		<div class="wrapper">
-			<div class="half-width inline-block">
-				<form name="catagoriesList" id="catagoriesList">
-					<p>Select up to Five Categories</p>
-					<p><label for="catagory_1_title">Catagory 1</label>
-					<input type="checkbox" id="catagory_1_title" value=""></p>
-					<p><label for="catagory_2_title">Catagory 2</label>
-					<input type="checkbox" id="catagory_2_title" value=""></p>
-					<p><label for="catagory_3_title">Catagory 3</label>
-					<input type="checkbox" id="catagory_3_title" value=""></p>
-					<p><label for="catagory_4_title">Catagory 4</label>
-					<input type="checkbox" id="catagory_4_title" value=""></p>
-					<p><label for="catagory_5_title">Catagory 5</label>
-					<input type="checkbox" id="catagory_5_title" value=""></p>
-					<p><label for="catagory_6_title">Catagory 6</label>
-					<input type="checkbox" id="catagory_6_title" value=""></p>
-				</form>
+	<div id="gameboard">
+		<div class="board-wrapper">
+			<div class="catagory">
+				<div class="cat-title" id="cat-1-title">Catagory 1</div>
+				<div class="cat-question" id="question-1-1">100</div>
+				<div class="cat-question" id="question-1-1">200</div>
+				<div class="cat-question" id="question-1-1">300</div>
+				<div class="cat-question" id="question-1-1">400</div>
+				<div class="cat-question" id="question-1-1">500</div>
 			</div>
-			<div class="half-width inline-block">
-				<form name="teamNames" id="teamNames">
-					<p>Enter up to 4 Team Names</p>
-					Team 1: <input type="text" id="team1" placeholder="Required" required><br>
-					Team 2: <input type="text" id="team2" placeholder="Required" required><br>
-					Team 3: <input type="text" id="team3" placeholder="Optional"><br>
-					Team 4: <input type="text" id="team4" placeholder="Optional"><br><br>
-					<button type="button" class="button" id="NextButton" value="Submit" onclick="validateform()">Next</button>
-				</form>
+			<div class="catagory">
+				<div class="cat-title" id="cat-2-title">Catagory 2</div>
+				<div class="cat-question" id="question-2-1">100</div>
+				<div class="cat-question" id="question-2-1">200</div>
+				<div class="cat-question" id="question-2-1">300</div>
+				<div class="cat-question" id="question-2-1">400</div>
+				<div class="cat-question" id="question-2-1">500</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-3-title">Catagory 3</div>
+				<div class="cat-question" id="question-3-1">100</div>
+				<div class="cat-question" id="question-3-1">200</div>
+				<div class="cat-question" id="question-3-1">300</div>
+				<div class="cat-question" id="question-3-1">400</div>
+				<div class="cat-question" id="question-3-1">500</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-4-title">Catagory 4</div>
+				<div class="cat-question" id="question-4-1">100</div>
+				<div class="cat-question" id="question-4-1">200</div>
+				<div class="cat-question" id="question-4-1">300</div>
+				<div class="cat-question" id="question-4-1">400</div>
+				<div class="cat-question" id="question-4-1">500</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-5-title">Catagory 5</div>
+				<div class="cat-question" id="question-5-1">
+					<span>100</span>
+				</div>
+				<div class="cat-question" id="question-5-1">200</div>
+				<div class="cat-question" id="question-5-1">300</div>
+				<div class="cat-question" id="question-5-1">400</div>
+				<div class="cat-question" id="question-5-1">500</div>
+			</div>
+		</div>
+		<div class="scoreboard">
+			<div class="scorebox">
+				<h2>Team 1</h2>
+				<h3>some points</h3>
+			</div>
+			<div class="scorebox">
+				<h2>Team 1</h2>
+				<h3>some points</h3>
+			</div>
+			<div class="scorebox">
+				<h2>Team 1</h2>
+				<h3>some points</h3>
+			</div>
+			<div class="scorebox">
+				<h2>Team 1</h2>
+				<h3>some points</h3>
 			</div>
 		</div>
 	</div>
 
-	<div id="gameBoard">
-		<table id="game" cellspacing="5" cellpading="0" class="hide" style="display: table;">
-			<thead>
-				<tr>
-					<th id="cat1"></th>
-					<th id="cat2"></th>
-					<th id="cat3"></th>
-					<th id="cat4"></th>
-					<th id="cat5"></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr id="value100">
-					<!-- **********  100 Point Row  ********** -->
-					<td id="catagory_1">
-						<h3>
-							<div id="question_00"></div>
-							<div id="answer_00"></div>
-						</h3>
-					</td>
-					<td id="catagory_2">
-						<h3>
-							<div id="question_01"></div>
-							<div id="answer_01"></div>
-						</h3>
-					</td>
-					<td id="catagory_3">
-						<h3>
-							<div id="question_02"></div>
-							<div id="answer_02"></div>
-						</h3>
-					</td>
-					<td id="catagory_4">
-						<h3>
-							<div id="question_03"></div>
-							<div id="answer_03"></div>
-						</h3>
-					</td>
-					<td id="catagory_5">
-						<h3>
-							<div id="question_04"></div>
-							<div id="answer_04"></div>
-						</h3>
-					</td>
-				</tr>
-				<!-- **********  200 Point Row  ********** -->
-				<tr id="value200">
-					<td id="catagory_1">
-						<h3>
-							<div id="question_00"></div>
-							<div id="answer_00"></div>
-						</h3>
-					</td>
-					<td id="catagory_2">
-						<h3>
-							<div id="question_01"></div>
-							<div id="answer_01"></div>
-						</h3>
-					</td>
-					<td id="catagory_3">
-						<h3>
-							<div id="question_02"></div>
-							<div id="answer_02"></div>
-						</h3>
-					</td>
-					<td id="catagory_4">
-						<h3>
-							<div id="question_03"></div>
-							<div id="answer_03"></div>
-						</h3>
-					</td>
-					<td id="catagory_5">
-						<h3>
-							<div id="question_04"></div>
-							<div id="answer_04"></div>
-						</h3>
-					</td>
-				</tr>
-				<!-- **********  300 Point Row  ********** -->
-				<tr id="value300">
-					<td id="catagory_1">
-						<h3>
-							<div id="question_00"></div>
-							<div id="answer_00"></div>
-						</h3>
-					</td>
-					<td id="catagory_2">
-						<h3>
-							<div id="question_01"></div>
-							<div id="answer_01"></div>
-						</h3>
-					</td>
-					<td id="catagory_3">
-						<h3>
-							<div id="question_02"></div>
-							<div id="answer_02"></div>
-						</h3>
-					</td>
-					<td id="catagory_4">
-						<h3>
-							<div id="question_03"></div>
-							<div id="answer_03"></div>
-						</h3>
-					</td>
-					<td id="catagory_5">
-						<h3>
-							<div id="question_04"></div>
-							<div id="answer_04"></div>
-						</h3>
-					</td>
-				</tr>
-				<!-- **********  400 Point Row  ********** -->
-				<tr id="value400">
-					<td id="catagory_1">
-						<h3>
-							<div id="question_00"></div>
-							<div id="answer_00"></div>
-						</h3>
-					</td>
-					<td id="catagory_2">
-						<h3>
-							<div id="question_01"></div>
-							<div id="answer_01"></div>
-						</h3>
-					</td>
-					<td id="catagory_3">
-						<h3>
-							<div id="question_02"></div>
-							<div id="answer_02"></div>
-						</h3>
-					</td>
-					<td id="catagory_4">
-						<h3>
-							<div id="question_03"></div>
-							<div id="answer_03"></div>
-						</h3>
-					</td>
-					<td id="catagory_5">
-						<h3>
-							<div id="question_04"></div>
-							<div id="answer_04"></div>
-						</h3>
-					</td>
-				</tr>
-				<!-- **********  500 Point Row  ********** -->
-				<tr id="value500">
-					<td id="catagory_1">
-						<h3>
-							<div id="question_00"></div>
-							<div id="answer_00"></div>
-						</h3>
-					</td>
-					<td id="catagory_2">
-						<h3>
-							<div id="question_01"></div>
-							<div id="answer_01"></div>
-						</h3>
-					</td>
-					<td id="catagory_3">
-						<h3>
-							<div id="question_02"></div>
-							<div id="answer_02"></div>
-						</h3>
-					</td>
-					<td id="catagory_4">
-						<h3>
-							<div id="question_03"></div>
-							<div id="answer_03"></div>
-						</h3>
-					</td>
-					<td id="catagory_5">
-						<h3>
-							<div id="question_04"></div>
-							<div id="answer_04"></div>
-						</h3>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div id="score" style="display: block">
-			<table cellspacing="10">
-				<tbody>
-					<tr>
-						<th>
-							<input class="teamName" type="text" value="Team1">
-						</th>
-						<th>
-							<input class="teamName" type="text" value="Team2">
-						</th>
-					</tr>
-					<tr>
-						<td>
-							<h3 id="team1">0</h3>
-							<input class="add" onclick="game.addPoints(1)" value="+" type="button">
-							<input class="subtract" onclick ="game.subtractPoints(1)" value="-" type="button">
-						</td>
-						<td>
-							<h3 id="team2">0</h3>
-							<input class="add" onclick="game.addPoints(2)" value="+" type="button">
-							<input class="subtract" onclick="game.subtractPoints(2)" value="-" type="button">
-						</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-	</div>
-	<footer>
-		<p>Created By L. Gothberg and K. MacAuther</p>
-	</footer>
 </body>
-
 </html>
