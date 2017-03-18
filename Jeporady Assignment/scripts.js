@@ -1,6 +1,10 @@
-function getQuestions() {
-	var modal = $(this).parent().attr('id');
-	alert('modal');
+function showModal(currentQuestion) {
+	var modalID = $(currentQuestion).closest('.cat-question').attr('id');
+	alert( modalID );
+
+	var operationElement = $('#' + modalID).find('.modal');
+	alert( operationElement.attr('name') );
+	operationElement.attr('style', 'display:block');
 }
 
 // function displayModal() {
