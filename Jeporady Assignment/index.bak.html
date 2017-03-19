@@ -1,0 +1,482 @@
+<!doctype HTML>
+<html>
+<head>
+	<title>Gothberg &amp; MacAuther Jeporady</title>
+
+	<!-- jQuery 3.1.1 Minified -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+	<!-- Custom JS -->
+	<script src="./scripts.js"></script>
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	
+	<div id="gameboard">
+		<div class="board-wrapper">
+			<div class="catagory">
+				<div class="cat-title" id="cat-1-title">Catagory 1</div>
+				<div class="cat-question" id="question-1-1">
+					<a href="" onclick='showModal( this )'>100</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>correct response goes here.</h3>
+							</div>
+							<div class="award-points">
+								<!-- This is where all current team names goes. -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-1-2">
+					<a href="#" onclick='showModal( this )'>200</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-1-3">
+					<a href="#" onclick='showModal( this )'>300</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-1-4">
+					<a href="#" onclick='showModal( this )'>400</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-1-5">
+					<a href="#" onclick='showModal( this )'>500</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-2-title">Catagory 2</div>
+				<div class="cat-question" id="question-2-1">
+					<a href="#" onclick='showModal( this )'>100</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-2-2">
+					<a href="#" onclick='showModal( this )'>200</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-2-3">
+					<a href="#" onclick='showModal( this )'>300</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-2-4">
+					<a href="#" onclick='showModal( this )'>400</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-2-5">
+					<a href="#" onclick='showModal( this )'>500</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-3-title">Catagory 3</div>
+				<div class="cat-question" id="question-3-1">
+					<a href="#" onclick='showModal( this )'>100</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-3-2">
+					<a href="#" onclick='showModal( this )'>200</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-3-3">
+					<a href="#" onclick='showModal( this )'>300</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-3-4">
+					<a href="#" onclick='showModal( this )'>400</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-3-5">
+					<a href="#" onclick='showModal( this )'>500</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-4-title">Catagory 4</div>
+				<div class="cat-question" id="question-4-1">
+					<a href="#" onclick='showModal( this )'>100</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-4-2">
+					<a href="#" onclick='showModal( this )'>200</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-4-3">
+					<a href="#" onclick='showModal( this )'>300</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-4-4">
+					<a href="#" onclick='showModal( this )'>400</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-4-5">
+					<a href="#" onclick='showModal( this )'>500</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="catagory">
+				<div class="cat-title" id="cat-5-title">Catagory 5</div>
+				<div class="cat-question" id="question-5-1">
+					<a href="#" onclick='showModal( this )'>100</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-5-2">
+					<a href="#" onclick='showModal( this )'>200</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-5-3" value="300">
+					<a href="#" onclick='showModal( this )'>300</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-5-4">
+					<a href="#" onclick='showModal( this )'>400</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cat-question" id="question-5-5">
+					<a href="#" onclick='showModal( this )'>500</a>
+					<!-- Modal content -->
+					<div class="modal">
+						<div class="modal-content">
+							<div class="answer">
+								<h3>The clue goes here.</h3>
+							</div>
+							<div class="question">
+								<h3>The correct response goes here.</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="scoreboard">
+			<div class="scorebox" id="data-team-1">
+				<h2 name="team-name" >Team 1</h2>
+				<h3 name="team-score">some points</h3>
+			</div>
+			<div class="scorebox hide" id="data-team-2">
+				<h2 name="team-name" >Team 2</h2>
+				<h3 name="team-score">some points</h3>
+			</div>
+			<div class="scorebox" id="data-team-3">
+				<h2 name="team-name" >Team 3</h2>
+				<h3 name="team-score">some points</h3>
+			</div>
+			<div class="scorebox" id="data-team-4">
+				<h2 name="team-name" >Team 4</h2>
+				<h3 name="team-score">some points</h3>
+			</div>
+		</div>
+	</div>
+
+	<!-- ********************  CATAGORY SELECTION  ******************** -->
+	<div id="catagory-select">
+		<p>catagory selection</p>
+		<div class="inline-block">
+			<div class="half-width">
+				<form action="" id="catagories-list">
+					<div class="inline-block">
+						<label for="catagory-1">catagory 1</label>
+						<input type="checkbox" id="catagory-1" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-2">catagory 2</label>
+						<input type="checkbox" id="catagory-2" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-3">catagory 3</label>
+						<input type="checkbox" id="catagory-3" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-4">catagory 4</label>
+						<input type="checkbox" id="catagory-4" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-5">catagory 5</label>
+						<input type="checkbox" id="catagory-5" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-6">catagory 6</label>
+						<input type="checkbox" id="catagory-6" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-7">catagory 7</label>
+						<input type="checkbox" id="catagory-7" value="catagory-1">
+					</div>
+					<div class="inline-block">
+						<label for="catagory-8">catagory 8</label>
+						<input type="checkbox" id="catagory-8" value="catagory-1">
+					</div>
+				</form>
+			</div>
+			<div class="half-width">
+				<form action="" id="team-data">
+					<div class="">
+						<label for="team1">Team 1</label>
+						<input type="text" id="team1" placeholder="Required" required>
+					</div>
+					<div class="">
+						<label for="team2">Team 2</label>
+						<input type="text" id="team2" placeholder="Required" required>
+					</div>
+					<div class="">
+						<label for="team3">Team 3</label>
+						<input type="text" id="team3" placeholder="Optional">
+					</div>
+					<div class="">
+						<label for="team4">Team 4</label>
+						<input type="text" id="team4" placeholder="Optional">
+					</div>
+					<div class="">
+						<button type="reset">Reset</button>
+						<button type="button" onclick="validateForm()">Submit</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- ********************  LOGIN PAGE  ******************** -->
+	<div id="login-page">
+		<p>login page</p>
+	</div>
+
+</body>
+</html>

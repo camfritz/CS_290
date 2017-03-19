@@ -132,9 +132,9 @@ a.visited {
 
 /* Modal Content/Box */
 .modal-content {
-	background-color: #0000ff;
 	height: 80%;
 	width: 80%
+	background-color: #0000ff;
 	margin: 15% auto; /* 15% from the top and centered */
 	padding: 20px;
 	border: 1px solid #888;

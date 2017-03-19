@@ -1,10 +1,15 @@
 function showModal(currentQuestion) {
 	var modalID = $(currentQuestion).closest('.cat-question').attr('id');
 
-	if ( $("#data-team-1"*:not(:has(*)):visible) ) {
+	if (!$("#data-team-1").attr("class", "hide") ) {
 		var team1 = $("#data-team-1").find("team-name").text();
 		alert(team1);
 		// $("#" + modalID).find("#award-points").html("<p>" + team1 + "</p>");
+	}
+
+	if (!$("#data-team-2").attr("class", "hide")) {
+		var team2 = $("#data-team-2").find("team-name").text();
+		// $("#" + modalID).find("#award-points").html("<p>" + team2 + "</p>");
 	}
 	
 
@@ -20,8 +25,7 @@ function validateForm() {
 	var team3 = escape( $("#team3").val() );
 	var team4 = escape( $("#team4").val() );
 
-	if (numCatagoriesSelected != 1) {
-	// if (numCatagoriesSelected != 5) {
+	if (numCatagoriesSelected != 5) {
 		alert("You must select exactly 5 categories.");
 	} else if(team1 == "" || team2 == "") {
 		alert("At least two team names are required.");

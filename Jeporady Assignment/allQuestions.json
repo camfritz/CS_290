@@ -1,0 +1,17 @@
+{
+	"categories": [
+		{
+			"name": "Monty Python",
+			"question1": "What is the flight velocity of an unladen swallow?",
+			"answer1": "African or European",
+			"question2": "What weighs the same as a duck?",
+			"answer2": "A witch"
+		},
+		{
+			"name": "Rubin & Yong",
+			"question1": "How screwed are you for Dr. Rubin's next test?",
+			"answer1": "Rack off, ya bloody show pony."
+		}
+		
+	]
+}
